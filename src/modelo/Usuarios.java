@@ -27,11 +27,5 @@ public class Usuarios {
 	public void setFuncion(String funcion) {
 		this.funcion = funcion;
 	}
-	@Override
-	public String toString() {
-		return "Usuarios [codigo=" + codigo + ", nombre=" + nombre + ", funcion=" + funcion + "]";
-	}
 	
-	
-
 }
