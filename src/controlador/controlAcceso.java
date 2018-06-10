@@ -38,11 +38,11 @@ public class controlAcceso {
 	}
 
 	protected void comprobarFormulario() {
-		if (controlAcceso.this.registroUsuarios.getPfContraseña().getPassword().length == 0
+		if (controlAcceso.this.registroUsuarios.getPfContrasenia().getPassword().length == 0
 				|| controlAcceso.this.registroUsuarios.getTfUsuario().getText().length() == 0) {
 			JOptionPane.showMessageDialog(null, "Por favor rellene todos lo campos del formulario.","Error!!!", 0);
 		} else {
-			char[] clave = controlAcceso.this.registroUsuarios.getPfContraseña().getPassword();
+			char[] clave = controlAcceso.this.registroUsuarios.getPfContrasenia().getPassword();
 			String contrasenia = new String(clave);
 			String nombreUsuario = controlAcceso.this.registroUsuarios.getTfUsuario().getText();
 			comprobarUsuario(nombreUsuario, contrasenia);

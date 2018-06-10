@@ -18,9 +18,9 @@ import javax.swing.border.EmptyBorder;
 public class RegistroUsuarios extends JFrame {
 
 	private JButton btAceptar;
-	private JLabel lbUsuario, lbContraseña;
+	private JLabel lbUsuario, lbContrasenia;
 	private JTextField tfUsuario;
-	private JPasswordField pfContraseña;
+	private JPasswordField pfContrasenia;
 	private JPanel panelBtAceptar, panelUsuario;
 
 	public RegistroUsuarios() {
@@ -39,15 +39,15 @@ public class RegistroUsuarios extends JFrame {
 		btAceptar = new JButton("Aceptar");
 		lbUsuario = new JLabel("Usuario: ");
 		lbUsuario.setFont(new Font("Tw Cen MT", Font.BOLD | Font.ITALIC, 18));
-		lbContraseña = new JLabel("Contraseña: ");
-		lbContraseña.setFont(new Font("Tw Cen MT", Font.BOLD | Font.ITALIC, 18));
+		lbContrasenia = new JLabel("Contraseña: ");
+		lbContrasenia.setFont(new Font("Tw Cen MT", Font.BOLD | Font.ITALIC, 18));
 		tfUsuario = new JTextField(20);
-		pfContraseña = new JPasswordField(20);
+		pfContrasenia = new JPasswordField(20);
 		panelUsuario = new JPanel();
 		panelUsuario.setLayout(new GridLayout(2, 2, 8, 8));
 		panelUsuario.setBorder(new EmptyBorder(20, 20, 20, 20));
 		panelUsuario.setBackground(Color.YELLOW);
-		Component componentes[] = { lbUsuario, tfUsuario, lbContraseña, pfContraseña };
+		Component componentes[] = { lbUsuario, tfUsuario, lbContrasenia, pfContrasenia };
 		for (int i = 0; i < componentes.length; i++) {
 			panelUsuario.add(componentes[i]);
 		}
@@ -65,8 +65,8 @@ public class RegistroUsuarios extends JFrame {
 		return tfUsuario;
 	}
 
-	public JPasswordField getPfContraseña() {
-		return pfContraseña;
+	public JPasswordField getPfContrasenia() {
+		return pfContrasenia;
 	}
 
 	public void setTfUsuario(JTextField tfUsuario) {
@@ -74,7 +74,7 @@ public class RegistroUsuarios extends JFrame {
 	}
 
 	public void setPfContraseña(JPasswordField pfContraseña) {
-		this.pfContraseña = pfContraseña;
+		this.pfContrasenia = pfContraseña;
 	}
 
 	public void setPanelBtAceptar(JPanel panelBtAceptar) {
