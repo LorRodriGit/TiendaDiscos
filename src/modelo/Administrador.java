@@ -17,10 +17,12 @@ public class Administrador {
 		//Almacena el pedido en la base de datos
 		consultador.almacenaPedido(numPedido,cliente);
 		//Lista los articulos desde la interfaz de usuario
-		int[] articulos=listaArticulos();
-		int[] cantidades=listaCantidades();	
+		
+		//int[] articulos=listaArticulos();
+		//int[] cantidades=listaCantidades();	
+		
 		//Disminuye el stock en la base de datos
-		consultador.disminuirStock(articulos,cantidades);
+		//consultador.disminuirStock(articulos,cantidades);
 		
 	}
 	

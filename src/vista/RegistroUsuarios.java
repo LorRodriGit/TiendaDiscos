@@ -28,9 +28,9 @@ public class RegistroUsuarios extends JFrame {
 		this.setTitle("Acceso usuarios");
 		this.setVisible(true);
 		this.setBounds(600, 200, 600, 200);
-		this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
-		this.add(panelUsuario);
-		this.add(panelBtAceptar);
+		getContentPane().setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
+		getContentPane().add(panelUsuario);
+		getContentPane().add(panelBtAceptar);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 	}
@@ -46,13 +46,13 @@ public class RegistroUsuarios extends JFrame {
 		panelUsuario = new JPanel();
 		panelUsuario.setLayout(new GridLayout(2, 2, 8, 8));
 		panelUsuario.setBorder(new EmptyBorder(20, 20, 20, 20));
-		panelUsuario.setBackground(Color.YELLOW);
+		panelUsuario.setBackground(Color.GRAY);
 		Component componentes[] = { lbUsuario, tfUsuario, lbContrasenia, pfContrasenia };
 		for (int i = 0; i < componentes.length; i++) {
 			panelUsuario.add(componentes[i]);
 		}
 		panelBtAceptar = new JPanel(new FlowLayout());
-		panelBtAceptar.setBackground(Color.YELLOW);
+		panelBtAceptar.setBackground(Color.GRAY);
 		panelBtAceptar.add(btAceptar);
 
 	}

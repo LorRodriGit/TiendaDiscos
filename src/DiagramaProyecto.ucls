@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="controlador.controlAcceso" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/controlador/controlAcceso.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="682" y="249"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="controlador.Consultador" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/controlador/Consultador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="93" x="395" y="201"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="modelo.Cliente" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/modelo/Cliente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="87" x="301" y="340"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="modelo.Administrador" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/modelo/Administrador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="486" y="370"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="modelo.Conexion" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/modelo/Conexion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="87" x="573" y="340"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="modelo.ListaUsuarios" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/modelo/ListaUsuarios.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="103" x="700" y="340"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="modelo.Usuarios" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/modelo/Usuarios.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="87" x="843" y="340"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="vista.PanelConImagen" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/vista/PanelConImagen.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="120" x="639" y="77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="vista.AccesoAdmin" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/vista/AccesoAdmin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="103" x="1123" y="77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="vista.RegistroUsuarios" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/vista/RegistroUsuarios.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="123" x="799" y="77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="vista.PanelArticulos" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/vista/PanelArticulos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="994" y="236"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="vista.PanelCarritoCompra" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/vista/PanelCarritoCompra.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1182" y="232"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="vista.BotonConImagen" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/vista/BotonConImagen.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1108" y="409"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="vista.AccesoVendedor" project="TiendaDiscos" 
+    file="/TiendaDiscos/src/vista/AccesoVendedor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="121" x="962" y="77"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <association id="15">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="16" name="bBuscar"/>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="18">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="19">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="20" name="registroUsuarios"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="22">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="23" name="panelCarritoCompra"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="26" name="panelCarritoCompra"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="29" name="botonCliente"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="32" name="botonQuitar"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="35" name="consultador"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="38">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="39" name="panelArticulos"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="41">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="42">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="43" name="l1"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="45">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="46" name="panelArticulos"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="false" static="true"/>    
+    <operations public="false" package="false" protected="false" private="false" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

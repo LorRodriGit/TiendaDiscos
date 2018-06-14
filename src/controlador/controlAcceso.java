@@ -2,6 +2,8 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
@@ -13,9 +15,7 @@ import vista.AccesoVendedor;
 import vista.RegistroUsuarios;
 
 public class controlAcceso {
-	public static void main(String[] args) {
-		new controlAcceso(new RegistroUsuarios(), new ListaUsuarios());
-	}
+	
 
 	RegistroUsuarios registroUsuarios;
 	ListaUsuarios l1;
@@ -25,6 +25,27 @@ public class controlAcceso {
 		super();
 		this.registroUsuarios = registroUsuarios;
 		this.l1 = l1;
+		registroUsuarios.getBtAceptar().addKeyListener(new KeyListener() {
+			
+			@Override
+			public void keyTyped(KeyEvent e) {
+				
+				comprobarFormulario();
+				
+			}
+			
+			@Override
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void keyPressed(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		registroUsuarios.getBtAceptar().addActionListener(new ActionListener() {
 
 			@Override
