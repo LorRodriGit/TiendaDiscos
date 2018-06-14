@@ -25,20 +25,16 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 
-public class AccesoAdmin extends JFrame {
+public class AccesoUsuario extends JPanel {
 
-	private JPanel contentPane;
 	private PanelArticulos panelArticulos;
 	private PanelCarritoCompra panelCarritoCompra;
 	private JButton otro;
 	
-	public AccesoAdmin() {
+	public AccesoUsuario() {
 		this.setVisible(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 693, 508);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+		this.setBorder(new EmptyBorder(5, 5, 5, 5));
 		generarcomponentes();
 		ponerComponentesEnLayout();
 		
@@ -47,7 +43,7 @@ public class AccesoAdmin extends JFrame {
 	}
 
 	private void ponerComponentesEnLayout() {
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		GroupLayout gl_contentPane = new GroupLayout(this);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
@@ -63,14 +59,13 @@ public class AccesoAdmin extends JFrame {
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(panelCarritoCompra, GroupLayout.PREFERRED_SIZE, 238, GroupLayout.PREFERRED_SIZE))
 		);
-		contentPane.setLayout(gl_contentPane);
+		setLayout(gl_contentPane);
 		
 	}
 
 	private void generarcomponentes() {
 		otro=new JButton("Otro");
 		panelArticulos=new PanelArticulos();
-		panelArticulos.getBarraHerramientas().add(otro);
 		panelCarritoCompra=new PanelCarritoCompra();
 		
 	}

@@ -10,9 +10,8 @@ import java.util.Map.Entry;
 import javax.swing.JOptionPane;
 import modelo.Usuarios;
 import modelo.ListaUsuarios;
-import vista.AccesoAdmin;
-import vista.AccesoVendedor;
 import vista.RegistroUsuarios;
+import vista.VentanaPrincipal;
 
 public class controlAcceso {
 	
@@ -97,13 +96,7 @@ public class controlAcceso {
 	}
 
 	private void abrirventanaUsuario(String funcion) {
-		if (funcion.equals("Administrador")) {
-			registroUsuarios.dispose();
-			new AccesoAdmin();
-		} else if (funcion.equals("Ventas")) {
-			registroUsuarios.dispose();
-			new AccesoVendedor();
-		}
+		new VentanaPrincipal(funcion);
 	}
 
 	

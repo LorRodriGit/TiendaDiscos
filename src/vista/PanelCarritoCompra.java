@@ -15,6 +15,8 @@ import javax.swing.JToolBar;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class PanelCarritoCompra extends JPanel {
 	private JTextField textField;
@@ -93,18 +95,21 @@ public class PanelCarritoCompra extends JPanel {
 		lblVenta.setBackground(Color.GRAY);
 		lblVenta.setFont(new Font("Wide Latin", Font.BOLD, 14));
 		toolBar = new JToolBar();
-		botonCliente = new BotonConImagen("", "src/imagenes/cliente.png");
-		botonQuitar = new BotonConImagen("", "src/imagenes/quitar.png");
+		botonCliente = new BotonConImagen("", "src/imagenes/cliente.png",true);
+		botonQuitar = new BotonConImagen("", "src/imagenes/quitar.png",true);
+		botonQuitar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 
 		scrollPane = new JScrollPane();
-
 		lblTotal = new JLabel("Total:");
 		lblTotal.setToolTipText("");
 
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
 
-		btPagar = new BotonConImagen("Pagar", "src/imagenes/Pagar.png");
+		btPagar = new BotonConImagen("Pagar", "src/imagenes/Pagar.png",true);
 
 		tbCarritoCompra = new JTable();
 		modelo = new DefaultTableModel(null, columnas);

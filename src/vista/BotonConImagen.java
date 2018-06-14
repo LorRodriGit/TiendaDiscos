@@ -8,15 +8,16 @@ import javax.swing.JButton;
 
 public class BotonConImagen extends JButton{
 	
-	String nombreBoton;
-	String pathImagen;
+	private String nombreBoton;
+	private String pathImagen;
+
 	
-	
-	public BotonConImagen( String nombreBoton, String pathImagen) {
+	public BotonConImagen( String nombreBoton, String pathImagen , boolean velado) {
 		super();
 		this.pathImagen = pathImagen;
 		this.setText(nombreBoton);
 		this.setIcon(this.getImageIcon());
+		this.setEnabled(velado);
 	}
 
 

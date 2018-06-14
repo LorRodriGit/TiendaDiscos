@@ -13,8 +13,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
 
 public class PanelArticulos extends JPanel {
-	private JToolBar barraHerramientas;
-	private BotonConImagen bBuscar;
 	private JTable tbArticulos;
 	private DefaultTableModel modelo;
 	private String[] columnas = { "COD_ARTICULO", "NOMBRE", "UNIDADES", "DURACION", "PRECIO" };
@@ -30,21 +28,27 @@ public class PanelArticulos extends JPanel {
 
 	private void ponerComponentesEnLayout() {
 		GroupLayout groupLayout = new GroupLayout(this);
-		groupLayout.setHorizontalGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup().addContainerGap()
-						.addGroup(groupLayout.createParallelGroup(Alignment.LEADING).addComponent(lblArticulos)
-								.addComponent(barraHerramientas, GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
-								.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
-								.addComponent(btnSeleccionar))
-						.addGap(6)));
-		groupLayout.setVerticalGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup().addContainerGap()
-						.addComponent(barraHerramientas, GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-						.addPreferredGap(ComponentPlacement.UNRELATED)
-						.addComponent(lblArticulos, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
-						.addPreferredGap(ComponentPlacement.RELATED)
-						.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-						.addPreferredGap(ComponentPlacement.UNRELATED).addComponent(btnSeleccionar).addGap(26)));
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblArticulos)
+						.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
+						.addComponent(btnSeleccionar))
+					.addGap(6))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(53)
+					.addComponent(lblArticulos, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(btnSeleccionar)
+					.addGap(26))
+		);
 		setLayout(groupLayout);
 
 	}
@@ -56,11 +60,6 @@ public class PanelArticulos extends JPanel {
 		scrollPane = new JScrollPane();
 
 		btnSeleccionar = new JButton("Seleccionar");
-
-		barraHerramientas = new JToolBar();
-		barraHerramientas.setFloatable(false);
-		bBuscar = new BotonConImagen("Buscar", "src/imagenes/buscar.png");
-		barraHerramientas.add(bBuscar);
 		tbArticulos = new JTable();
 		modelo = new DefaultTableModel(null, columnas);
 		tbArticulos.setModel(modelo);
@@ -68,8 +67,5 @@ public class PanelArticulos extends JPanel {
 		scrollPane.setViewportView(tbArticulos);
 	}
 
-	public JToolBar getBarraHerramientas() {
-		return barraHerramientas;
-	}
-
+	
 }

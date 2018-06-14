@@ -27,7 +27,7 @@ public class Modelo {
 	public Object[][] mostrarTabla(){
 		int x=0;
 		Object resultado[][];
-		resultado=new Object[x][5];
+		resultado=new Object[10][5];
 		try {
 			statement=conexion.getConexion().createStatement();
 			resultSet=statement.executeQuery("SELECT * FROM ARTICULO");
@@ -37,12 +37,12 @@ public class Modelo {
 				resultado[x][2]=resultSet.getObject("UNIDADES");
 				resultado[x][3]=resultSet.getObject("DURACION");
 				resultado[x][4]=resultSet.getObject("PRECIO");
+				x++;
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return  resultado;
 	}
 }
