@@ -9,10 +9,10 @@ import javax.swing.JToolBar;
 
 import vista.VentanaPrincipal;
 
-public class Controlador {
+public class ControladorPaneles {
 	VentanaPrincipal ventanaPrincipal;
 
-	public Controlador(VentanaPrincipal ventanaPrincipal) {
+	public ControladorPaneles(VentanaPrincipal ventanaPrincipal) {
 		super();
 		this.ventanaPrincipal = ventanaPrincipal;
 		JToolBar barraHerramientas = ventanaPrincipal.getBarraHerramientas();

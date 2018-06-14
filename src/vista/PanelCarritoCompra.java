@@ -19,10 +19,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class PanelCarritoCompra extends JPanel {
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField txtCodCliente;
+	private JTextField txtCodVenta;
 	private JTable tbCarritoCompra;
-	private DefaultTableModel modelo;
+	private DefaultTableModel modeloCarritoCompra;
 	private JTextField textField_2;
 	private BotonConImagen botonCliente, botonQuitar, btPagar;
 	private JLabel lblVenta, lblTotal;
@@ -112,8 +112,8 @@ public class PanelCarritoCompra extends JPanel {
 		btPagar = new BotonConImagen("Pagar", "src/imagenes/Pagar.png",true);
 
 		tbCarritoCompra = new JTable();
-		modelo = new DefaultTableModel(null, columnas);
-		tbCarritoCompra.setModel(modelo);
+		modeloCarritoCompra = new DefaultTableModel(null, columnas);
+		tbCarritoCompra.setModel(modeloCarritoCompra);
 		tbCarritoCompra.getColumnModel().getColumn(0).setPreferredWidth(93);
 		scrollPane.setViewportView(tbCarritoCompra);
 
@@ -121,9 +121,9 @@ public class PanelCarritoCompra extends JPanel {
 		toolBar.add(lblCodventa);
 		toolBar.setFloatable(false);
 
-		textField_1 = new JTextField();
-		toolBar.add(textField_1);
-		textField_1.setColumns(8);
+		txtCodVenta = new JTextField();
+		toolBar.add(txtCodVenta);
+		txtCodVenta.setColumns(8);
 
 		JSeparator separator = new JSeparator();
 		separator.setBackground(new Color(255, 255, 255));
@@ -134,9 +134,33 @@ public class PanelCarritoCompra extends JPanel {
 		JLabel lblCodcliente = new JLabel("      Cod_cliente:       ");
 		toolBar.add(lblCodcliente);
 
-		textField = new JTextField();
-		toolBar.add(textField);
-		textField.setColumns(8);
+		txtCodCliente = new JTextField();
+		toolBar.add(txtCodCliente);
+		txtCodCliente.setColumns(8);
+	}
+
+	public BotonConImagen getBotonCliente() {
+		return botonCliente;
+	}
+
+	public BotonConImagen getBotonQuitar() {
+		return botonQuitar;
+	}
+
+	public BotonConImagen getBtPagar() {
+		return btPagar;
+	}
+
+	public JTextField getTxtCodCliente() {
+		return txtCodCliente;
+	}
+
+	public JTable getTbCarritoCompra() {
+		return tbCarritoCompra;
+	}
+
+	public DefaultTableModel getModeloCarritoCompra() {
+		return modeloCarritoCompra;
 	}
 
 }

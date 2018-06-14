@@ -9,7 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import org.omg.PortableServer.POAPackage.AdapterAlreadyExists;
 
-import controlador.Controlador;
+import controlador.ControladorPaneles;
 import modelo.Usuarios;
 
 import javax.swing.JToolBar;
@@ -25,14 +25,14 @@ public class VentanaPrincipal extends JFrame {
 	private JPanel contentPane;
 	private JToolBar barraHerramientas;
 	private BotonConImagen btBuscar, btVentasDia, btModificarArticulo, btAltaEmpleado, btAltaCliente;
-	private AccesoUsuario accesoUsuario;
+	private VentasPanel accesoUsuario;
 	private VentasDia ventasDia;
 	private ModificarArticulo modificarArticulo;
 	private AltaCliente altaCliente;
 	private AltaEmpleado altaEmpleado;
 	private JPanel panel;
 	private CardLayout cardLayout;
-	private Controlador controlador;
+	private ControladorPaneles controlador;
 	
 	public VentanaPrincipal(String usuario) {
 		crearBarraHerramientas(usuario);
@@ -47,7 +47,7 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		cardLayout = new CardLayout(0, 0);
 		panel.setLayout(cardLayout);
-		accesoUsuario=new AccesoUsuario();
+		accesoUsuario=new VentasPanel();
 		ventasDia=new VentasDia();
 		modificarArticulo=new ModificarArticulo();
 		altaCliente=new AltaCliente();
@@ -57,7 +57,7 @@ public class VentanaPrincipal extends JFrame {
 		panel.add(modificarArticulo,MODIFICAR_ARTICULO);
 		panel.add(altaCliente,ALTA_CLIENTE);
 		panel.add(altaEmpleado,ALTA_E_MPLEADO);
-		controlador=new Controlador(this);
+		controlador=new ControladorPaneles(this);
 		
 	}
 

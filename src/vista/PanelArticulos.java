@@ -14,7 +14,7 @@ import javax.swing.JButton;
 
 public class PanelArticulos extends JPanel {
 	private JTable tbArticulos;
-	private DefaultTableModel modelo;
+	private DefaultTableModel modeloArticulos;
 	private String[] columnas = { "COD_ARTICULO", "NOMBRE", "UNIDADES", "DURACION", "PRECIO" };
 	private JScrollPane scrollPane;
 	private JButton btnSeleccionar;
@@ -61,10 +61,22 @@ public class PanelArticulos extends JPanel {
 
 		btnSeleccionar = new JButton("Seleccionar");
 		tbArticulos = new JTable();
-		modelo = new DefaultTableModel(null, columnas);
-		tbArticulos.setModel(modelo);
+		modeloArticulos = new DefaultTableModel(null, columnas);
+		tbArticulos.setModel(modeloArticulos);
 		tbArticulos.getColumnModel().getColumn(0).setPreferredWidth(91);
 		scrollPane.setViewportView(tbArticulos);
+	}
+
+	public JTable getTbArticulos() {
+		return tbArticulos;
+	}
+
+	public JButton getBtnSeleccionar() {
+		return btnSeleccionar;
+	}
+
+	public DefaultTableModel getModeloArticulos() {
+		return modeloArticulos;
 	}
 
 	

@@ -2,11 +2,16 @@ package vista;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import mock.ClienteMOC;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JComboBox;
@@ -17,34 +22,18 @@ public class Buscarcliente extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	private JComboBox comboBox;
+	private String codCliente=null;
 	
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			Buscarcliente dialog = new Buscarcliente(new ClienteMOC().getClientes());
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Create the dialog.
-	 * @param clientes 
-	 */
-	
-	public Buscarcliente(String[][] clientes) {
+	public Buscarcliente(Object[][] clientes) {
+		setModal(true);//para la ejecucion del programa hasta que termine el jdialog
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
-		comboBox = new JComboBox();
+	
+		comboBox = new JComboBox<String>();
 		for (int i = 0; i < clientes.length; i++) {
-			comboBox.addItem(clientes[i].clone());
+			comboBox.addItem(clientes[i][1]);
 		}
 		JLabel lblNombreCliente = new JLabel("Nombre Cliente:");
 		GroupLayout gl_contentPanel = new GroupLayout(contentPanel);
@@ -67,6 +56,7 @@ public class Buscarcliente extends JDialog {
 					.addContainerGap(162, Short.MAX_VALUE))
 		);
 		contentPanel.setLayout(gl_contentPanel);
+		
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -74,16 +64,27 @@ public class Buscarcliente extends JDialog {
 			{
 				JButton okButton = new JButton("OK");
 				okButton.setActionCommand("OK");
+				okButton.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						codCliente=(String) clientes[comboBox.getSelectedIndex()][0];
+						dispose();
+						
+					}
+				});
+	
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
+				setVisible(true);
 			}
-			{
-				JButton cancelButton = new JButton("Cancel");
-				cancelButton.setActionCommand("Cancel");
-				buttonPane.add(cancelButton);
-			}
+			
 		}
-		new ClienteMOC().getClientes();
+	}
+
+	
+	public String getCodCliente() {
+		return codCliente;
 	}
 
 }

@@ -22,20 +22,25 @@ import javax.swing.JScrollBar;
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
+
+import controlador.VentasControlador;
+
 import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 
-public class AccesoUsuario extends JPanel {
-
+public class VentasPanel extends JPanel {
+	
 	private PanelArticulos panelArticulos;
 	private PanelCarritoCompra panelCarritoCompra;
 	private JButton otro;
+	private VentasControlador controlador;
 	
-	public AccesoUsuario() {
+	public VentasPanel() {
 		this.setVisible(true);
 		setBounds(100, 100, 693, 508);
 		this.setBorder(new EmptyBorder(5, 5, 5, 5));
 		generarcomponentes();
+		controlador=new VentasControlador(this);
 		ponerComponentesEnLayout();
 		
 		
@@ -68,5 +73,33 @@ public class AccesoUsuario extends JPanel {
 		panelArticulos=new PanelArticulos();
 		panelCarritoCompra=new PanelCarritoCompra();
 		
+	}
+
+	public JTable getTbArticulos() {
+		return panelArticulos.getTbArticulos();
+	}
+
+	public BotonConImagen getBotonCliente() {
+		return panelCarritoCompra.getBotonCliente();
+	}
+
+	public JTextField getTxtCodCliente() {
+		return panelCarritoCompra.getTxtCodCliente();
+	}
+
+	public JButton getBtnSeleccionar() {
+		return panelArticulos.getBtnSeleccionar();
+	}
+
+	public JTable getTbCarritoCompra() {
+		return panelCarritoCompra.getTbCarritoCompra();
+	}
+
+	public DefaultTableModel getModeloArticulos() {
+		return panelArticulos.getModeloArticulos();
+	}
+
+	public DefaultTableModel getModeloCarritoCompra() {
+		return panelCarritoCompra.getModeloCarritoCompra();
 	}
 }
