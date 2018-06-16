@@ -27,9 +27,9 @@ public class VentanaPrincipal extends JFrame {
 	private BotonConImagen btBuscar, btVentasDia, btModificarArticulo, btAltaEmpleado, btAltaCliente;
 	private VentasPanel accesoUsuario;
 	private VentasDia ventasDia;
-	private ModificarArticulo modificarArticulo;
-	private AltaCliente altaCliente;
-	private AltaEmpleado altaEmpleado;
+	private ModificarArticuloPanel modificarArticulo;
+	private AltaClientePanel altaCliente;
+	private AltaEmpleadoPanel altaEmpleado;
 	private JPanel panel;
 	private CardLayout cardLayout;
 	private ControladorPaneles controlador;
@@ -49,9 +49,9 @@ public class VentanaPrincipal extends JFrame {
 		panel.setLayout(cardLayout);
 		accesoUsuario=new VentasPanel();
 		ventasDia=new VentasDia();
-		modificarArticulo=new ModificarArticulo();
-		altaCliente=new AltaCliente();
-		altaEmpleado=new AltaEmpleado();
+		modificarArticulo=new ModificarArticuloPanel();
+		altaCliente=new AltaClientePanel();
+		altaEmpleado=new AltaEmpleadoPanel();
 		panel.add(accesoUsuario, ACCESO_USUARIO);
 		panel.add(ventasDia, VENTAS_DIA);
 		panel.add(modificarArticulo,MODIFICAR_ARTICULO);

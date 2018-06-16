@@ -20,7 +20,7 @@ public class PruebasInicio  {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaPrincipal frame=new VentanaPrincipal("Administra");
+					VentanaPrincipal frame=new VentanaPrincipal("Administrador");
 					frame.setVisible(true);
 					frame.pack();
 				} catch (Exception e) {

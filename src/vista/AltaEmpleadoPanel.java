@@ -8,12 +8,12 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JButton;
 
-public class AltaEmpleado extends JPanel {
+public class AltaEmpleadoPanel extends JPanel {
 	private JTextField txfCodigo, tfNombre, tfPoblacion;
 	private JLabel lbCodigo, lbNombre, labelFuncion, lblAltaEmpleado;
 	private JButton btnSalir, btnAceptar;
 
-	public AltaEmpleado() {
+	public AltaEmpleadoPanel() {
 		crearComponentes();
 
 		GroupLayout groupLayout = new GroupLayout(this);

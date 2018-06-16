@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -26,7 +25,7 @@ public class PanelCarritoCompra extends JPanel {
 	private JTextField textField_2;
 	private BotonConImagen botonCliente, botonQuitar, btPagar;
 	private JLabel lblVenta, lblTotal;
-	private String[] columnas = { "COD_ARTICULO", "DESCRIPCION", "UNIDADES", "PRECIO", "FECHA" };
+	private String[] columnas = { "COD_ARTICULO", "NOMBRE",  "PRECIO", "CANTIDAD" };
 	private JToolBar toolBar;
 	private JScrollPane scrollPane;
 
@@ -114,7 +113,6 @@ public class PanelCarritoCompra extends JPanel {
 		tbCarritoCompra = new JTable();
 		modeloCarritoCompra = new DefaultTableModel(null, columnas);
 		tbCarritoCompra.setModel(modeloCarritoCompra);
-		tbCarritoCompra.getColumnModel().getColumn(0).setPreferredWidth(93);
 		scrollPane.setViewportView(tbCarritoCompra);
 
 		JLabel lblCodventa = new JLabel("      Cod_Venta:       ");
@@ -161,6 +159,10 @@ public class PanelCarritoCompra extends JPanel {
 
 	public DefaultTableModel getModeloCarritoCompra() {
 		return modeloCarritoCompra;
+	}
+
+	public JTextField getTxtCodVenta() {
+		return txtCodVenta;
 	}
 
 }

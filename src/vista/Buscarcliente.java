@@ -68,7 +68,7 @@ public class Buscarcliente extends JDialog {
 					
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						codCliente=(String) clientes[comboBox.getSelectedIndex()][0];
+						codCliente=String.valueOf(clientes[comboBox.getSelectedIndex()][0]);
 						dispose();
 						
 					}

@@ -5,17 +5,21 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
+import controlador.AltaClienteControlador;
+
 import java.awt.Font;
 import javax.swing.JButton;
 
-public class AltaCliente extends JPanel {
+public class AltaClientePanel extends JPanel {
 	private JTextField txfCodigo, tfNombre, tfPoblacion;
 	private JLabel lbCodigo, lbNombre, labelPoblacion, lblAltaCliente;
 	private JButton btnSalir, btnAceptar;
+	private AltaClienteControlador altaClienteControlador;
 
-	public AltaCliente() {
+	public AltaClientePanel() {
 		crearComponentes();
-
+		altaClienteControlador=new AltaClienteControlador(this);
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(groupLayout.createParallelGroup(Alignment.LEADING).addGroup(groupLayout
 				.createSequentialGroup()
@@ -74,6 +78,22 @@ public class AltaCliente extends JPanel {
 		lblAltaCliente.setFont(new Font("Wide Latin", Font.BOLD, 13));
 		btnSalir = new JButton("Salir");
 		btnAceptar = new JButton("Aceptar");
+	}
+
+	public JButton getBtnAceptar() {
+		return btnAceptar;
+	}
+
+	public JTextField getTxfCodigo() {
+		return txfCodigo;
+	}
+
+	public JTextField getTfNombre() {
+		return tfNombre;
+	}
+
+	public JTextField getTfPoblacion() {
+		return tfPoblacion;
 	}
 
 }

@@ -1,38 +1,23 @@
 package vista;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.util.Vector;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.ImageIcon;
-import javax.swing.JToolBar;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import java.awt.FlowLayout;
 import javax.swing.JButton;
-import javax.swing.JTextField;
-import java.awt.Toolkit;
+import javax.swing.JPanel;
 import javax.swing.JTable;
-import javax.swing.JScrollBar;
-import javax.swing.border.BevelBorder;
-import java.awt.Color;
+import javax.swing.JTextField;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import controlador.VentasControlador;
-
-import javax.swing.JScrollPane;
-import javax.swing.JSeparator;
 
 public class VentasPanel extends JPanel {
 	
 	private PanelArticulos panelArticulos;
 	private PanelCarritoCompra panelCarritoCompra;
-	private JButton otro;
 	private VentasControlador controlador;
 	
 	public VentasPanel() {
@@ -69,7 +54,6 @@ public class VentasPanel extends JPanel {
 	}
 
 	private void generarcomponentes() {
-		otro=new JButton("Otro");
 		panelArticulos=new PanelArticulos();
 		panelCarritoCompra=new PanelCarritoCompra();
 		
@@ -101,5 +85,38 @@ public class VentasPanel extends JPanel {
 
 	public DefaultTableModel getModeloCarritoCompra() {
 		return panelCarritoCompra.getModeloCarritoCompra();
+	}
+
+	public void addLineaCarritoCompra(Vector vector) {
+		Vector miVector=new Vector();
+		//primero posicion del vector nuevo, segundo valor que queremos poner
+		if (!modeloContiene(vector)) {
+			miVector.add(0,vector.get(0));
+			miVector.add(1,vector.get(1));
+			miVector.add(2,vector.get(4));
+			miVector.add(3,1);
+			getModeloCarritoCompra().addRow(miVector);
+		}
+	}
+
+	private boolean modeloContiene(Vector vector) {
+		boolean retorno=false;
+		int rowCount = getModeloCarritoCompra().getRowCount();
+		for (int i = 0; i < rowCount; i++) {
+			if(vector.get(0).equals(getModeloCarritoCompra().getValueAt(i, 0))){
+				getModeloCarritoCompra().setValueAt(((Integer)getModeloCarritoCompra().getValueAt(i, 3))+1, i, 3);	
+				retorno =true;
+			}
+			
+		}
+		return retorno;
+	}
+
+	public BotonConImagen getBotonQuitar() {
+		return panelCarritoCompra.getBotonQuitar();
+	}
+
+	public JTextField getTxtCodVenta() {
+		return panelCarritoCompra.getTxtCodVenta();
 	}
 }
