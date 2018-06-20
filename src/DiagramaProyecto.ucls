@@ -119,39 +119,43 @@
     </display>  
   </class>  
   <association id="14">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="15" name="controlador">        
+    <bendpoint x="1003" y="281"/>    
+    <bendpoint x="1003" y="374"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="15" name="btVentasDia">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="16" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="17">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="18" name="accesoUsuario">        
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="18" name="controlador">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="19" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="20">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="21" name="panelArticulos">        
+    <bendpoint x="961" y="281"/>    
+    <bendpoint x="961" y="374"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="21" name="btModificarArticulo">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="22" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="23">    
@@ -169,22 +173,24 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="26">    
+    <bendpoint x="940" y="281"/>    
+    <bendpoint x="940" y="374"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="27" name="altaEmpleado">        
+      <attribute id="27" name="btBuscar">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="28" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="29">    
-    <bendpoint x="961" y="281"/>    
-    <bendpoint x="961" y="374"/>    
+    <bendpoint x="982" y="281"/>    
+    <bendpoint x="982" y="374"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="30" name="btModificarArticulo">        
+      <attribute id="30" name="btAltaCliente">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="31" minimum="0" maximum="1">        
@@ -195,48 +201,44 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="32">    
-    <bendpoint x="1003" y="281"/>    
-    <bendpoint x="1003" y="374"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="33" name="btVentasDia">        
+      <attribute id="33" name="altaEmpleado">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="34" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="35">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="36" name="ventasDia">        
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="36" name="panelArticulos">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="37" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="38">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="39" name="altaCliente">        
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="39" name="panelCarritoCompra">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="40" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="41">    
-    <bendpoint x="982" y="281"/>    
-    <bendpoint x="982" y="374"/>    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="42" name="btAltaCliente">        
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="42" name="btPagar">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="43" minimum="0" maximum="1">        
@@ -248,7 +250,7 @@
   </association>  
   <association id="44">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="45" name="botonCliente">        
+      <attribute id="45" name="botonQuitar">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="46" minimum="0" maximum="1">        
@@ -259,77 +261,75 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="47">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="48" name="ventasPanel">        
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="48" name="botonCliente">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="49" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="50">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="51" name="panelCarritoCompra">        
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="51" name="accesoUsuario">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="52" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="53">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="54" name="botonQuitar">        
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="54" name="modificarArticulo">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="55" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="56">    
-    <bendpoint x="940" y="281"/>    
-    <bendpoint x="940" y="374"/>    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="57" name="btBuscar">        
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="57" name="ventasPanel">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="58" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="59">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="60" name="modificarArticulo">        
+      <attribute id="60" name="altaCliente">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="61" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="62">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="63" name="btPagar">        
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="63" name="ventasDia">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="64" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

@@ -22,7 +22,7 @@ public class PanelCarritoCompra extends JPanel {
 	private JTextField txtCodVenta;
 	private JTable tbCarritoCompra;
 	private DefaultTableModel modeloCarritoCompra;
-	private JTextField textField_2;
+	private JTextField txTotal;
 	private BotonConImagen botonCliente, botonQuitar, btPagar;
 	private JLabel lblVenta, lblTotal;
 	private String[] columnas = { "COD_ARTICULO", "NOMBRE",  "PRECIO", "CANTIDAD" };
@@ -49,7 +49,7 @@ public class PanelCarritoCompra extends JPanel {
 								.addGroup(groupLayout.createSequentialGroup()
 									.addComponent(lblTotal, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
 									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+									.addComponent(txTotal, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 								.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE))
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addGroup(groupLayout.createSequentialGroup()
@@ -81,7 +81,7 @@ public class PanelCarritoCompra extends JPanel {
 							.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(txTotal, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblTotal)
 						.addComponent(btPagar, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap())
@@ -105,8 +105,8 @@ public class PanelCarritoCompra extends JPanel {
 		lblTotal = new JLabel("Total:");
 		lblTotal.setToolTipText("");
 
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
+		txTotal = new JTextField();
+		txTotal.setColumns(10);
 
 		btPagar = new BotonConImagen("Pagar", "src/imagenes/Pagar.png",true);
 
@@ -163,6 +163,10 @@ public class PanelCarritoCompra extends JPanel {
 
 	public JTextField getTxtCodVenta() {
 		return txtCodVenta;
+	}
+
+	public JTextField getTxTotal() {
+		return txTotal;
 	}
 
 }

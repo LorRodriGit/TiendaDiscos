@@ -1,23 +1,18 @@
 package vista;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.CardLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JToolBar;
 import javax.swing.border.EmptyBorder;
 
-import org.omg.PortableServer.POAPackage.AdapterAlreadyExists;
-
 import controlador.ControladorPaneles;
-import modelo.Usuarios;
-
-import javax.swing.JToolBar;
-import java.awt.CardLayout;
 
 public class VentanaPrincipal extends JFrame {
 
-	private static final String ALTA_E_MPLEADO = "AltaEMpleado";
+	private static final String ALTA_EMPLEADO = "AltaEMpleado";
 	private static final String ALTA_CLIENTE = "AltaCliente";
 	private static final String MODIFICAR_ARTICULO = "ModificarArticulo";
 	private static final String VENTAS_DIA = "VentasDia";
@@ -35,9 +30,10 @@ public class VentanaPrincipal extends JFrame {
 	private ControladorPaneles controlador;
 	
 	public VentanaPrincipal(String usuario) {
+		this.setVisible(true);
 		crearBarraHerramientas(usuario);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 520, 431);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -56,8 +52,9 @@ public class VentanaPrincipal extends JFrame {
 		panel.add(ventasDia, VENTAS_DIA);
 		panel.add(modificarArticulo,MODIFICAR_ARTICULO);
 		panel.add(altaCliente,ALTA_CLIENTE);
-		panel.add(altaEmpleado,ALTA_E_MPLEADO);
+		panel.add(altaEmpleado,ALTA_EMPLEADO);
 		controlador=new ControladorPaneles(this);
+		pack();
 		
 	}
 
@@ -65,10 +62,10 @@ public class VentanaPrincipal extends JFrame {
 		boolean velado=true;
 		barraHerramientas = new JToolBar();
 		btBuscar=new BotonConImagen("Buscar", "src/imagenes/buscar.png",velado);
-		btAltaCliente=new BotonConImagen("Nuevo Cliente", "src/imagenes/buscar.png",velado);
+		btAltaCliente=new BotonConImagen("Nuevo Cliente", "src/imagenes/NuevoCliente.png",velado);
 		velado=usuario.equals("Administrador");
-		btVentasDia=new BotonConImagen("Ventas dia", "src/imagenes/buscar.png",velado);
-		btModificarArticulo=new BotonConImagen("Modificar Articulo", "src/imagenes/buscar.png",velado);
+		btVentasDia=new BotonConImagen("Ventas dia", "src/imagenes/VentasDia.png",velado);
+		btModificarArticulo=new BotonConImagen("Modificar Articulo", "src/imagenes/Modificar.png",velado);
 		btAltaEmpleado=new BotonConImagen("Nuevo empleado", "src/imagenes/buscar.png",velado);	
 		barraHerramientas.add(btBuscar);
 		barraHerramientas.add(btVentasDia);
@@ -79,7 +76,7 @@ public class VentanaPrincipal extends JFrame {
 		btVentasDia.setName(VENTAS_DIA);
 		btModificarArticulo.setName(MODIFICAR_ARTICULO);
 		btAltaCliente.setName(ALTA_CLIENTE);
-		btAltaEmpleado.setName(ALTA_E_MPLEADO);
+		btAltaEmpleado.setName(ALTA_EMPLEADO);
 		
 	}
 

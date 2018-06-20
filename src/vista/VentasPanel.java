@@ -90,11 +90,13 @@ public class VentasPanel extends JPanel {
 	public void addLineaCarritoCompra(Vector vector) {
 		Vector miVector=new Vector();
 		//primero posicion del vector nuevo, segundo valor que queremos poner
+		//comprueba si la tabla contiene el codigo del articulo y suma uno, si no 
+		//añade una fila nueva y pone uno en cantidad
 		if (!modeloContiene(vector)) {
 			miVector.add(0,vector.get(0));
 			miVector.add(1,vector.get(1));
 			miVector.add(2,vector.get(4));
-			miVector.add(3,1);
+			miVector.add(3,1);//añade uno a las unidades
 			getModeloCarritoCompra().addRow(miVector);
 		}
 	}
@@ -118,5 +120,13 @@ public class VentasPanel extends JPanel {
 
 	public JTextField getTxtCodVenta() {
 		return panelCarritoCompra.getTxtCodVenta();
+	}
+
+	public JTextField getTxTotal() {
+		return panelCarritoCompra.getTxTotal();
+	}
+
+	public BotonConImagen getBtPagar() {
+		return panelCarritoCompra.getBtPagar();
 	}
 }

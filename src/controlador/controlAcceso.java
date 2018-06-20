@@ -82,7 +82,10 @@ public class controlAcceso {
 				aux = (Usuarios) usuario.getValue();
 				if (aux.getNombre().equals(nombreUsuario)) {
 					String funcion = aux.getFuncion();
-					abrirventanaUsuario(funcion);
+					registroUsuarios.dispose();
+				new VentanaPrincipal(funcion);
+					
+					
 					encontrado=true;
 				} 
 
